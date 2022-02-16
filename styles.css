@@ -1,5 +1,36 @@
 *{
-  background-color: darkslateblue;
   padding: 0px;
   margin: 0px;
+}
+.contenedor {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* .contenedor div{
+} */
+.cuadro {
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  background-color:black;
+}
+.cuadro div {
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  font-family: monospace;
+}
+.cuadro div:hover{
+background-color: rgba(255, 255, 255, 0.897);
+cursor: pointer;
 }
