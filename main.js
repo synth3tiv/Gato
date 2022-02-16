@@ -1,5 +1,6 @@
 let turno = false;
 let victoria = false;
+let contador = 0;
 
 const handleClick = (event) => {
   const { id } = event.target;
@@ -13,6 +14,7 @@ const handleClick = (event) => {
 };
 
 const verificaVictoria = () => {
+  contador++;
   const div1 = document.getElementById(1);
   const div2 = document.getElementById(2);
   const div3 = document.getElementById(3);
@@ -65,7 +67,11 @@ const verificaVictoria = () => {
 
   if (forma1 || forma2 || forma3 || forma4 || forma5 || forma6 || forma7 || forma8) {
     victoria = true;
-    alert("Ganaste!");
+    alert(`Ganaron los ${turno ? "O" : "X"} !`);
+  } else {
+    if (contador === 9) {
+      alert('Empate!');
+    }
   }
 }
 
@@ -92,4 +98,5 @@ const reload = () => {
 
   turno = false;
   victoria = false;
+  contador = 0;
 }
